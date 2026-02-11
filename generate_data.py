@@ -2,21 +2,20 @@ import pandas as pd
 import numpy as np
 import os
 
-# 1. 锁定随机种子 (保证每次生成的数据都一样)
+#
 np.random.seed(42)
 
 
 def generate_dummy_data(filename='dummy_data.csv', n_samples=1000):
     print(f"Generating comprehensive synthetic data: {filename} ...")
 
-    # 2. 生成时间序列 (覆盖你的研究周期: 2022-2024)
+    #
     dates = pd.date_range(start='2022-01-01', end='2024-10-15', freq='D')
     sim_dates = np.random.choice(dates, n_samples, replace=True)
 
-    # 3. 生成完整变量列表 (40+变量)
-    # 注意：这里的分布(normal/lognormal)是为了让数据看起来像真的，但不涉及任何隐私
+    #
     df = pd.DataFrame({
-        # --- 核心索引与结果 ---
+        #
         'admission_date': sim_dates,
         'readmission_within_1_year': np.random.randint(0, 2, n_samples),
 
@@ -75,13 +74,12 @@ def generate_dummy_data(filename='dummy_data.csv', n_samples=1000):
         'total_protein': np.random.normal(70, 5, n_samples),
     })
 
-    # 4. 数据清洗与保存
-    # 简单的逻辑修正 (避免生出不合理的数据，比如年龄<0)
+    #
     df['age'] = df['age'].clip(lower=40, upper=100)
     df['lvef'] = df['lvef'].clip(lower=20, upper=80)
     df['admission_date'] = pd.to_datetime(df['admission_date'])
 
-    # 按时间排序 (这是你代码里 Drift Analysis 的要求)
+    # 
     df = df.sort_values(by=['admission_date']).reset_index(drop=True)
 
     df.to_csv(filename, index=False)
