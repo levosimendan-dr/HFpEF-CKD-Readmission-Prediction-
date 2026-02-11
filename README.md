@@ -1,7 +1,7 @@
-# Development and Temporal Validation of a Machine Learning Model for Readmission in HFpEF and CKD
+# Temporal Validation of a Machine Learning Readmission Model in Heart Failure With Preserved Ejection Fraction and Chronic Kidney Disease
 
 This repository contains the source code and reproduction pipeline for the paper:  
-**"Development and Temporal Validation of a Machine Learning Model for Readmission in Heart Failure With Preserved Ejection Fraction and Chronic Kidney Disease"**
+**"Temporal Validation of a Machine Learning Readmission Model in Heart Failure With Preserved Ejection Fraction and Chronic Kidney Disease"**
 
 **Authors:** Ping Xie*, Yaoting Deng, Weijie Lu, Yang Zhong, JiaJia Liu, Pengcheng Sheng, Mengyang Liu, Kang Yang, Yujie Hu, Nan Ma (*Corresponding Author)
 
@@ -57,3 +57,4 @@ Due to stringent patient privacy regulations, the original clinical EHR dataset 
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
+
