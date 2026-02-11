@@ -4,8 +4,7 @@ OFFICIAL CODE REPOSITORY
 ========================================================================================
 
 Paper Title:
-    Development and Temporal Validation of a Machine Learning Model for Readmission
-    in Heart Failure With Preserved Ejection Fraction and Chronic Kidney Disease
+    Temporal Validation of a Machine Learning Readmission Model in Heart Failure With Preserved Ejection Fraction and Chronic Kidney Disease
 
 Authors:
     Ping Xie*, Yaoting Deng, Weijie Lu, Yang Zhong, JiaJia Liu, Pengcheng Sheng,
@@ -16,7 +15,7 @@ Authors:
 Description:
     This script contains the main analytical pipeline for the study. It performs:
     1. Data Loading & Temporal Splitting (Derivation vs. Validation)
-    2. Population Characteristic Analysis (Table 1)
+    2. Population Characteristic Analysis 
     3. Robust Feature Selection (Lasso + RFECV with Stability Runs)
     4. Model Training & Hyperparameter Tuning (XGBoost, LightGBM, LR, etc.)
     5. Comprehensive Evaluation (AUROC, Calibration, DCA, Temporal Robustness)
@@ -3351,4 +3350,5 @@ df_final.to_csv(filename, index=False, encoding='utf-8-sig')
 
 print("-" * 60)
 print(f"Done! Saved to: {filename}")
+
 print("-" * 60)
